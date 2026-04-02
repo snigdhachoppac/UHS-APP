@@ -498,44 +498,7 @@ body { display: flex; flex-direction: column; align-items: center; }
 
 <div class="phone">
 
-<!-- ════════════════════════════════════════
-     LOGIN
-════════════════════════════════════════ -->
-<div class="screen login-screen" id="s-login">
-  <div class="login-topbar">
-    <div class="login-topbar-logo">
-      <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="6" fill="rgba(255,255,255,0.15)"/><path d="M8 14c2-1 4 1 6 3 1 1 3 3 6 3s5-2 6-3c2-2 4-4 6-3-1 2-3 4-5 5 1 1 2 3 2 5 0 3-2 5-5 5-1 0-2 0-3-1v2h-2v-2c-1 1-2 1-3 1-3 0-5-2-5-5 0-2 1-4 2-5C11 18 9 16 8 14z" fill="white"/></svg>
-      <span>TEXAS</span>
-    </div>
-  </div>
-  <div class="login-body">
-    <div class="login-main-title">Sign in with your UT EID</div>
-    <input class="login-field" id="eid-input" type="text" placeholder="UT EID" autocomplete="username"/>
-    <input class="login-field" id="pw-input" type="password" placeholder="Password" autocomplete="current-password"/>
-    <button class="login-submit" onclick="handleSignIn()">SIGN IN</button>
-    <div class="login-links-list">
-      <a class="login-link-item" onclick="toast('Password reset link sent to your email.')">I forgot my UT EID or password.</a>
-      <a class="login-link-item" onclick="toast('Enter your temporary password above.')">I have a temporary password.</a>
-      <a class="login-link-item" onclick="toast('Visit utexas.edu/eid to create your EID.')">I need a UT EID.</a>
-      <a class="login-link-item" onclick="toast('Opening UT EID Help Center...')">Help</a>
-    </div>
-    <div class="login-legal">Unauthorized use of university computer and networking resources is prohibited. If you log in, you acknowledge the university's <span style="color:var(--burnt)">Acceptable Use Policy</span> and <span style="color:var(--burnt)">Information Resources Use and Security Policy</span>.</div>
-    <div class="login-emergency"><strong>Medical emergency?</strong> Call 911 &nbsp;·&nbsp; Mental health crisis? Call <strong>988</strong> or <strong>512-471-2255</strong></div>
-  </div>
-  <div class="login-footer">
-    <a onclick="toast('Opening Emergency Information...')">Emergency Information</a> |
-    <a onclick="toast('Opening Site Policies...')">Site Policies</a> |
-    <a onclick="toast('Opening Privacy Policy...')">Web Privacy Policy</a><br>
-    © The University of Texas at Austin 2026
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════
-     HOME
-════════════════════════════════════════ -->
-<div class="screen home-screen" id="s-home" style="flex-direction:column;position:relative;">
-
-  <!-- SLIDE-IN DRAWER OVERLAY -->
+<!-- SLIDE-IN DRAWER OVERLAY -->
   <div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
     <div class="drawer" id="side-drawer" onclick="event.stopPropagation()">
       <div class="drawer-header">
@@ -622,6 +585,43 @@ body { display: flex; flex-direction: column; align-items: center; }
       </div>
     </div>
   </div>
+
+<!-- ════════════════════════════════════════
+     LOGIN
+════════════════════════════════════════ -->
+<div class="screen login-screen" id="s-login">
+  <div class="login-topbar">
+    <div class="login-topbar-logo">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="6" fill="rgba(255,255,255,0.15)"/><path d="M8 14c2-1 4 1 6 3 1 1 3 3 6 3s5-2 6-3c2-2 4-4 6-3-1 2-3 4-5 5 1 1 2 3 2 5 0 3-2 5-5 5-1 0-2 0-3-1v2h-2v-2c-1 1-2 1-3 1-3 0-5-2-5-5 0-2 1-4 2-5C11 18 9 16 8 14z" fill="white"/></svg>
+      <span>TEXAS</span>
+    </div>
+  </div>
+  <div class="login-body">
+    <div class="login-main-title">Sign in with your UT EID</div>
+    <input class="login-field" id="eid-input" type="text" placeholder="UT EID" autocomplete="username"/>
+    <input class="login-field" id="pw-input" type="password" placeholder="Password" autocomplete="current-password"/>
+    <button class="login-submit" onclick="handleSignIn()">SIGN IN</button>
+    <div class="login-links-list">
+      <a class="login-link-item" onclick="toast('Password reset link sent to your email.')">I forgot my UT EID or password.</a>
+      <a class="login-link-item" onclick="toast('Enter your temporary password above.')">I have a temporary password.</a>
+      <a class="login-link-item" onclick="toast('Visit utexas.edu/eid to create your EID.')">I need a UT EID.</a>
+      <a class="login-link-item" onclick="toast('Opening UT EID Help Center...')">Help</a>
+    </div>
+    <div class="login-legal">Unauthorized use of university computer and networking resources is prohibited. If you log in, you acknowledge the university's <span style="color:var(--burnt)">Acceptable Use Policy</span> and <span style="color:var(--burnt)">Information Resources Use and Security Policy</span>.</div>
+    <div class="login-emergency"><strong>Medical emergency?</strong> Call 911 &nbsp;·&nbsp; Mental health crisis? Call <strong>988</strong> or <strong>512-471-2255</strong></div>
+  </div>
+  <div class="login-footer">
+    <a onclick="toast('Opening Emergency Information...')">Emergency Information</a> |
+    <a onclick="toast('Opening Site Policies...')">Site Policies</a> |
+    <a onclick="toast('Opening Privacy Policy...')">Web Privacy Policy</a><br>
+    © The University of Texas at Austin 2026
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     HOME
+════════════════════════════════════════ -->
+<div class="screen home-screen" id="s-home" style="flex-direction:column;position:relative;">
 
   <!-- TOP BAR -->
   <div style="background:#1a1a1a;border-bottom:1px solid #2a2a2a;padding:.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;">
@@ -752,7 +752,7 @@ body { display: flex; flex-direction: column; align-items: center; }
 ════════════════════════════════════════ -->
 <div class="screen" id="s-profile" style="flex-direction:column;background:var(--cream);">
   <div class="app-hdr">
-    <div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Profile</span></div></div>
+    <div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Profile</span></div></div>
     <div class="ah-usr"><div class="avi">JD</div></div>
   </div>
   <div class="profile-hero">
@@ -790,7 +790,7 @@ body { display: flex; flex-direction: column; align-items: center; }
 ════════════════════════════════════════ -->
 <div class="screen" id="s-appts" style="flex-direction:column;background:var(--cream);">
   <div class="app-hdr">
-    <div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Appointments</span></div></div>
+    <div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Appointments</span></div></div>
     <div class="ah-usr"><div class="avi">JD</div></div>
   </div>
   <div class="scr">
@@ -861,7 +861,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      MEDICAL CLEARANCES
 ════════════════════════════════════════ -->
 <div class="screen" id="s-clearances" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Medical Clearances</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Medical Clearances</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="status-hero">
       <div>
@@ -906,7 +906,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      HEALTH HISTORY
 ════════════════════════════════════════ -->
 <div class="screen" id="s-health" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Health History</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Health History</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="card" style="padding:1rem;">
       <div style="font-size:12px;color:var(--ink3);margin-bottom:.75rem;">Last reviewed: January 12, 2026 · 9:05 AM</div>
@@ -936,7 +936,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      CONSENT FORMS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-consent" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Consent Forms</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Consent Forms</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="alert-bar"><strong>1 form needs your signature.</strong> Tap it below to review and sign.</div>
     <div class="search-bar">
@@ -981,7 +981,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      GROUPS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-groups" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Groups & Workshops</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Groups & Workshops</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div><div class="sec-hdr">Various Topics — Spring 2026</div>
     <div class="card">
@@ -1024,7 +1024,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      REFERRALS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-referrals" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Referrals</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Referrals</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="empty-state">
       <div class="empty-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
@@ -1046,7 +1046,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      HANDOUTS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-handouts" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Handouts</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Handouts</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="alert-bar"><strong>2 new handouts</strong> from your care team.</div>
     <div class="card" id="handout-list">
@@ -1091,7 +1091,7 @@ body { display: flex; flex-direction: column; align-items: center; }
 ════════════════════════════════════════ -->
 <div class="screen" id="s-messages" style="flex-direction:column;background:var(--cream);">
   <div class="app-hdr">
-    <div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Secure Messages</span></div></div>
+    <div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Secure Messages</span></div></div>
     <button onclick="openComposeModal()" style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:5px 10px;font-size:11px;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;">+ New</button>
   </div>
   <div class="msg-tabs-row">
@@ -1179,7 +1179,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      LETTERS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-letters" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Letters</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Letters</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="search-bar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" placeholder="Filter letters..."/></div>
     <div class="card">
@@ -1215,7 +1215,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      INSURANCE
 ════════════════════════════════════════ -->
 <div class="screen" id="s-insurance" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Insurance Details</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Insurance Details</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="info-box blue"><strong>Adding insurance?</strong> Tap "Add Insurance Plan" below. Upload front and back of your card, enter your carrier name, policy number, and group number, then save. Plans show as unverified until staff confirm coverage.</div>
     <div><div class="sec-hdr">Verified Insurance</div>
@@ -1265,7 +1265,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      SURVEYS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-surveys" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Surveys</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Surveys</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div><div class="sec-hdr">Survey Invitations</div><div class="empty-state"><div class="empty-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg></div><div class="empty-label">No surveys to complete</div><div class="empty-sub">Check back after your next appointment.</div></div></div>
     <div><div class="sec-hdr">Questionnaire Invitations</div><div class="empty-state"><div class="empty-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg></div><div class="empty-label">No questionnaires available</div></div></div>
@@ -1283,7 +1283,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      HEALTH RECORDS
 ════════════════════════════════════════ -->
 <div class="screen" id="s-records" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Health Records</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Health Records</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="tab-pills" id="record-tabs">
       <button class="tab-pill active" onclick="switchRecordTab('visits',this)">Visits</button>
@@ -1317,7 +1317,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      IMMUNIZATION HISTORY
 ════════════════════════════════════════ -->
 <div class="screen" id="s-immunizations" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Immunization History</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Immunization History</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="info-box">This may not be a complete record. "Administered" immunizations were given at UT Austin UHS. Others listed here have been verified by UHS staff from an official record.</div>
     <div style="display:flex;align-items:center;justify-content:space-between;">
@@ -1350,7 +1350,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      IMMUNIZATION UPLOAD
 ════════════════════════════════════════ -->
 <div class="screen" id="s-immupload" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('immunizations')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Immunization Upload</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Immunization Upload</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="scr">
     <div class="info-box">Upload scanned immunization records. Accepted: PNG, JPG, JPEG, GIF. <strong>Click Save after uploading.</strong></div>
     <div class="info-box green">After uploading, visit <strong>Medical Clearances</strong> to enter dates of required vaccines.</div>
@@ -1390,7 +1390,7 @@ body { display: flex; flex-direction: column; align-items: center; }
      BEVO AI CHATBOT
 ════════════════════════════════════════ -->
 <div class="screen" id="s-chatbot" style="flex-direction:column;background:var(--cream);">
-  <div class="app-hdr"><div class="ah-l"><button class="back-btn" onclick="go('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><polyline points="15,18 9,12 15,6"/></svg></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Bevo AI Assistant</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
+  <div class="app-hdr"><div class="ah-l"><button onclick="openDrawer()" style="background:#222;border:1px solid #2e2e2e;border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:background .2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#222'"><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:13px;height:2px;background:#aaa;border-radius:2px;"></span><span style="display:block;width:18px;height:2px;background:#aaa;border-radius:2px;"></span></button><div><span class="ah-sub">MyUHS</span><span class="ah-brand">Bevo AI Assistant</span></div></div><div class="ah-usr"><div class="avi">JD</div></div></div>
   <div class="chat-hdr">
     <div class="chat-bot-avi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div>
     <div><div style="font-size:13px;font-weight:600;color:var(--ink);">Bevo AI</div><div style="font-size:10px;color:var(--green);font-weight:500;">● Online — Powered by Claude</div></div>
